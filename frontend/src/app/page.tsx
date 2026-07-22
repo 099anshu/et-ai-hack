@@ -591,7 +591,7 @@ function ChallengesSection() {
     >
       <div className="container">
         {/* Header */}
-        <div className="<div className="section-header-row" style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: "3rem", flexWrap: "wrap", gap: "1rem" }}>
+        <div className="section-header-row" style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: "3rem", flexWrap: "wrap", gap: "1rem" }}>
           <span className="label-text">Case Studies</span>
           <h2
             className="section-header-title--right"
