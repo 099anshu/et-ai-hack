@@ -220,16 +220,17 @@ export function Navbar() {
                 </button>
               </div>
             ) : (
-              <Link
-                href="/login"
-                className="btn btn-primary hidden md:flex"
-                style={{ alignItems: "center", gap: "0.375rem" }}
-              >
-                Get Started
-                <ExternalLink size={13} />
-              </Link>
+              <div className="hidden md:flex">
+                <Link
+                  href="/login"
+                  className="btn btn-primary"
+                  style={{ display: "flex", alignItems: "center", gap: "0.375rem" }}
+                >
+                  Get Started
+                  <ExternalLink size={13} />
+                </Link>
+              </div>
             )}
-
             {/* Mobile Menu */}
             <button
               onClick={() => setMobileOpen((v) => !v)}
