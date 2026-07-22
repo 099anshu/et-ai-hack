@@ -130,12 +130,11 @@ export function Navbar() {
           {/* Desktop Nav */}
           <div
             style={{
-              display: "flex",
               alignItems: "center",
               gap: "0.25rem",
               flex: 1,
             }}
-            className="hidden-mobile"
+            className="hidden md:flex"
           >
             {navLinks.map((link) => (
               <Link
