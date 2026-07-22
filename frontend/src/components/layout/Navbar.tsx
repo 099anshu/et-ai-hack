@@ -199,8 +199,9 @@ export function Navbar() {
               {theme === "dark" ? <Sun size={16} /> : <Moon size={16} />}
             </button>
 
-            {/* CTA / Session Actions */}
+            {/* CTA / Session Actions — hidden on mobile, available via the drawer menu instead */}
             {user ? (
+              <div className="hidden-mobile" style={{ display: "flex", alignItems: "center", gap: "0.75rem" }}>
               <div style={{ display: "flex", alignItems: "center", gap: "0.75rem" }}>
                 <span style={{ fontSize: "0.875rem", color: "var(--text-secondary)", fontWeight: 600 }}>
                   {user.name}
