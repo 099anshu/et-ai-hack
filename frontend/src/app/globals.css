@@ -563,6 +563,28 @@ h1, h2, h3, h4, h5, h6 {
 .section-gap { padding: 6rem 0; }
 .container { max-width: 1280px; margin: 0 auto; padding: 0 2rem; }
 
+.grid-2 { display: grid; grid-template-columns: 1fr 1fr; }
+.grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); }
+.grid-4-steps { display: grid; grid-template-columns: repeat(4, 1fr); }
+.grid-stats { display: grid; grid-template-columns: repeat(3, 1fr); }
+
+@media (max-width: 900px) {
+  .grid-4-steps { grid-template-columns: repeat(2, 1fr); row-gap: 2.5rem; }
+  .grid-4-steps .step-connector { display: none; }
+}
+
+@media (max-width: 768px) {
+  .section-gap { padding: 3.5rem 0; }
+  .grid-2,
+  .grid-3 { grid-template-columns: 1fr; }
+  .grid-stats { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 640px) {
+  .container { padding: 0 1.25rem; }
+  .grid-4-steps { grid-template-columns: 1fr; row-gap: 2rem; }
+}
+
 /* ── Table ─────────────────────────────────────────────────────────────────── */
 .data-table { width: 100%; border-collapse: collapse; }
 
