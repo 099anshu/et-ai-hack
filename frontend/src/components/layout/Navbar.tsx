@@ -204,7 +204,7 @@ export function Navbar() {
               <div className="hidden-mobile" style={{ display: "flex", alignItems: "center", gap: "0.75rem" }}>
                 <span style={{ fontSize: "0.875rem", color: "var(--text-secondary)", fontWeight: 600 }}>
                   {user.name}
-                </span>
+                </span> 
                 <Link
                   href={dashboardHref}
                   className="btn btn-secondary btn-sm"
