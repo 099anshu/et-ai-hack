@@ -924,7 +924,7 @@ function CTASection() {
               <span style={{ fontSize: "0.7rem", color: "rgba(255,255,255,0.5)", letterSpacing: "0.1em", textTransform: "uppercase" }}>
                 Who is this for?
               </span>
-              <div style={{ display: "flex", gap: "0.75rem", marginTop: "0.5rem" }}>
+              <div style={{ display: "flex", flexWrap: "wrap", gap: "0.75rem", marginTop: "0.5rem" }}>
                 {["Law Enforcement", "Financial Institution", "Government Agency"].map((r) => (
                   <label key={r} style={{ display: "flex", alignItems: "center", gap: "0.375rem", cursor: "pointer" }}>
                     <input type="radio" name="role" style={{ accentColor: "white" }} />
