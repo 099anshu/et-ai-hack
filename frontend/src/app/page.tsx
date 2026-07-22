@@ -61,8 +61,7 @@ function HeroSection() {
       />
 
       <div className="container" style={{ position: "relative", zIndex: 1, width: "100%" }}>
-        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "4rem", alignItems: "center" }}>
-
+        <div className="grid-2" style={{ gap: "4rem", alignItems: "center" }}>
           {/* Left Content */}
           <div style={{ opacity: visible ? 1 : 0, transform: visible ? "translateY(0)" : "translateY(32px)", transition: "all 700ms ease" }}>
             {/* Label */}
