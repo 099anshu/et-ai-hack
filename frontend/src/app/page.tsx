@@ -998,7 +998,7 @@ function Footer() {
               RAKSHA<span style={{ color: "var(--accent)" }}>·AI</span>
             </span>
           </div>
-          <div style={{ display: "flex", gap: "2rem" }}>
+          <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "center", gap: "1.5rem 2rem" }}>
             {["SENTINEL", "NETRA", "JAAL", "DRISHTI", "KAVACH"].map((m) => (
               <Link key={m} href={`/${m.toLowerCase()}`} style={{ fontSize: "0.75rem", color: "var(--text-muted)", textDecoration: "none", letterSpacing: "0.1em", fontWeight: 500 }}>{m}</Link>
             ))}
