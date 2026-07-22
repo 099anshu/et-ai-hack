@@ -129,12 +129,13 @@ export function ThreatGauge({ score, size = 160, label = "Threat Score", animate
           alignItems: "center",
           gap: "2px",
           textAlign: "center",
+          maxWidth: size * 0.85,
         }}
       >
         <span
           style={{
             fontFamily: "var(--font-display)",
-            fontSize: size * 0.22 + "px",
+            fontSize: (size >= 100 ? size * 0.22 : size * 0.32) + "px",
             fontWeight: 800,
             color,
             lineHeight: 1,
@@ -144,20 +145,24 @@ export function ThreatGauge({ score, size = 160, label = "Threat Score", animate
         >
           {displayScore}
         </span>
-        <span style={{ fontSize: "0.6rem", color: "var(--text-muted)", letterSpacing: "0.08em", textTransform: "uppercase" }}>
-          {label}
-        </span>
-        <span
-          style={{
-            fontSize: "0.625rem",
-            fontWeight: 700,
-            letterSpacing: "0.1em",
-            textTransform: "uppercase",
-            color,
-          }}
-        >
-          {riskLabel}
-        </span>
+        {size >= 100 && (
+          <>
+            <span style={{ fontSize: "0.6rem", color: "var(--text-muted)", letterSpacing: "0.08em", textTransform: "uppercase" }}>
+              {label}
+            </span>
+            <span
+              style={{
+                fontSize: "0.625rem",
+                fontWeight: 700,
+                letterSpacing: "0.1em",
+                textTransform: "uppercase",
+                color,
+              }}
+            >
+              {riskLabel}
+            </span>
+          </>
+        )}
       </div>
     </div>
   );
