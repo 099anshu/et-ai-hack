@@ -604,7 +604,7 @@ function ChallengesSection() {
               letterSpacing: "-0.03em",
               maxWidth: "500px",
             }}
-          >
+           >
             Key Challenges<br />We Solve.
           </h2>
         </div>
