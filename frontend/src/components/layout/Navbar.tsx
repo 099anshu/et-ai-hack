@@ -307,14 +307,6 @@ export function Navbar() {
         </div>
       )}
 
-      <style jsx>{`
-        @media (max-width: 768px) {
-          .hidden-mobile { display: none !important; }
-        }
-        @media (min-width: 769px) {
-          .mobile-only { display: none !important; }
-        }
-      `}</style>
     </>
   );
 }
