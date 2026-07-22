@@ -234,7 +234,7 @@ export function Navbar() {
             <button
               onClick={() => setMobileOpen((v) => !v)}
               aria-label="Toggle menu"
-              className="mobile-only"
+              className="flex md:hidden"
               style={{
                 background: "none",
                 border: "none",
