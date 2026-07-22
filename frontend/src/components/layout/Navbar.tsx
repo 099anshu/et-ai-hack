@@ -202,7 +202,6 @@ export function Navbar() {
             {/* CTA / Session Actions — hidden on mobile, available via the drawer menu instead */}
             {user ? (
               <div className="hidden-mobile" style={{ display: "flex", alignItems: "center", gap: "0.75rem" }}>
-              <div style={{ display: "flex", alignItems: "center", gap: "0.75rem" }}>
                 <span style={{ fontSize: "0.875rem", color: "var(--text-secondary)", fontWeight: 600 }}>
                   {user.name}
                 </span>
@@ -224,7 +223,7 @@ export function Navbar() {
             ) : (
               <Link
                 href="/login"
-                className="btn btn-primary"
+                className="btn btn-primary hidden-mobile"
                 style={{ display: "flex", alignItems: "center", gap: "0.375rem" }}
               >
                 Get Started
