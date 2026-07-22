@@ -885,7 +885,7 @@ function CTASection() {
       </div>
 
       <div className="container" style={{ position: "relative", zIndex: 1 }}>
-        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "4rem", alignItems: "center" }}>
+        <div className="grid-2" style={{ gap: "4rem", alignItems: "center" }}>
           <div>
             <span style={{ display: "block", fontSize: "0.75rem", fontWeight: 600, letterSpacing: "0.12em", textTransform: "uppercase", color: "rgba(255,255,255,0.6)", marginBottom: "1rem" }}>
               Get Started
