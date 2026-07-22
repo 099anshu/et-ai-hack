@@ -1,0 +1,61 @@
+# RAKSHA AI — FastAPI Backend
+# Core API server + ASGI runtime
+fastapi==0.115.6
+uvicorn[standard]==0.34.0
+pydantic==2.11.4
+pydantic-settings==2.9.1
+python-multipart==0.0.20
+cryptography>=42.0.0
+
+# Image processing & CV
+opencv-python-headless==4.11.0.86
+Pillow>=10.4.0
+numpy>=1.26.0
+# Required only when deploying a NETRA-KERAS-1 artifact exported by the Colab workflow.
+tensorflow-cpu>=2.16,<2.19
+
+# YOLOv12 (Ultralytics >= 8.3 supports YOLOv12)
+ultralytics>=8.3.0
+
+# Supabase
+supabase==2.15.0
+httpx==0.28.1
+
+# OCR — SPECIMEN & serial-number detection (Stage 0 of NETRA pipeline)
+# EasyOCR: Python-only, no system Tesseract required, ~1.5 GB models on first run
+easyocr>=1.7.0
+# pytesseract: lighter weight but requires tesseract-ocr system binary
+#   Windows: https://github.com/UB-Mannheim/tesseract/wiki
+#   Linux:   sudo apt install tesseract-ocr
+pytesseract>=0.3.10
+
+# paddleocr is a third OCR fallback — large install, import-guarded
+# paddleocr>=2.7.0
+
+# SENTINEL — Speech-to-Text (Faster-Whisper)
+faster-whisper>=1.1.0
+
+# SENTINEL — NLP & Classification
+sentence-transformers>=3.0.0
+transformers>=4.40.0
+
+# SENTINEL — Voice Analysis
+librosa>=0.10.0
+soundfile>=0.12.0
+
+# SENTINEL — Audio utilities
+pydub>=0.25.0
+
+# SENTINEL — TTS for scenario audio generation
+gTTS>=2.5.0
+
+# WHATSAPP / KAVACH-WA — Groq AI SDK for chat analysis
+groq>=0.12.0
+
+# Phone Intelligence — web scraping for public number data
+beautifulsoup4>=4.12.0
+lxml>=5.0.0
+
+# KAVACH RAG — Upstash Vector DB client
+upstash-vector>=0.5.0
+
