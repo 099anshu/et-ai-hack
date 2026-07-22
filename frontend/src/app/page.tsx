@@ -414,7 +414,7 @@ function ModulesSection() {
   return (
     <section className="section-gap" id="modules">
       <div className="container">
-        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-end", marginBottom: "3.5rem", flexWrap: "wrap", gap: "1rem" }}>
+       <div className="section-header-row" style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-end", marginBottom: "3.5rem", flexWrap: "wrap", gap: "1rem" }}>
           <div>
             <span className="label-text" style={{ display: "block", marginBottom: "0.75rem" }}>
               Our Modules
@@ -591,9 +591,10 @@ function ChallengesSection() {
     >
       <div className="container">
         {/* Header */}
-        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: "3rem", flexWrap: "wrap", gap: "1rem" }}>
+        <div className="<div className="section-header-row" style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: "3rem", flexWrap: "wrap", gap: "1rem" }}>
           <span className="label-text">Case Studies</span>
-          <h2
+          <<h2
+            className="section-header-title--right"
             style={{
               fontFamily: "var(--font-display)",
               fontSize: "clamp(2rem, 4vw, 3.5rem)",
@@ -601,7 +602,6 @@ function ChallengesSection() {
               color: "var(--text-primary)",
               lineHeight: 1.1,
               letterSpacing: "-0.03em",
-              textAlign: "right",
               maxWidth: "500px",
             }}
           >
