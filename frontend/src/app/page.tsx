@@ -135,6 +135,7 @@ function HeroSection() {
             <div
               style={{
                 display: "flex",
+                flexWrap: "wrap",
                 gap: "2rem",
                 marginTop: "3rem",
                 paddingTop: "2rem",
@@ -438,12 +439,12 @@ function ModulesSection() {
         </div>
 
         {/* Grid: 3 top, 2 bottom */}
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "1.25rem" }}>
+        <div className="grid-3" style={{ gap: "1.25rem" }}>
           {modules.slice(0, 3).map((mod) => (
             <ModuleCard key={mod.codename} mod={mod} />
           ))}
         </div>
-        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "1.25rem", marginTop: "1.25rem" }}>
+        <div className="grid-2" style={{ gap: "1.25rem", marginTop: "1.25rem" }}>
           {modules.slice(3).map((mod) => (
             <ModuleCard key={mod.codename} mod={mod} />
           ))}
@@ -609,7 +610,7 @@ function ChallengesSection() {
         </div>
 
         {/* 3-column cards */}
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "1px", background: "var(--bg-border)" }}>
+        <div className="grid-3" style={{ gap: "1px", background: "var(--bg-border)" }}>
           {challenges.map((c) => (
             <div
               key={c.title}
@@ -726,9 +727,10 @@ function HowItWorksSection() {
           </h2>
         </div>
 
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: "0", position: "relative" }}>
+        <div className="grid-4-steps" style={{ gap: "0", position: "relative" }}>
           {/* Connecting line */}
           <div
+            className="step-connector"
             style={{
               position: "absolute",
               top: "2rem",
@@ -825,7 +827,7 @@ function ImpactSection() {
           </h2>
         </div>
 
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "1.25rem" }}>
+        <div className="grid-3" style={{ gap: "1.25rem" }}>
           {impactStats.map(({ num, label, icon: Icon }) => (
             <div
               key={label}
