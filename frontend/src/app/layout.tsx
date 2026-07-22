@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";   // ← added Viewport here
 import { Inter, Playfair_Display, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/providers/ThemeProvider";
@@ -11,15 +11,12 @@ const inter = Inter({
   variable: "--font-inter",
   display: "swap",
 });
-
-
 const playfair = Playfair_Display({
   subsets: ["latin"],
   variable: "--font-playfair",
   weight: ["400", "600", "700", "800", "900"],
   display: "swap",
 });
-
 const jetbrains = JetBrains_Mono({
   subsets: ["latin"],
   variable: "--font-jetbrains",
@@ -39,6 +36,12 @@ export const metadata: Metadata = {
       "AI-powered platform to detect digital arrest scams, counterfeit currency, and fraud networks.",
     type: "website",
   },
+};
+
+// ↓ this whole block is new — add it right after `metadata`
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
 };
 
 export default function RootLayout({
